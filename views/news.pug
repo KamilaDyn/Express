@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  div(class='container news')
+    h1= title
+    form(method='get')
+      input(class="search" type='text' value=search name='search')
+      input(class="button" type="submit" value='szukaj')
+    
+    each item in data
+      div(class='article')
+        article
+          h2(class='title')=item.title
+          p(class="data")=item.created
+          p(class='description')=item.description

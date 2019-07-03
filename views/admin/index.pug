@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+  div(class='container')
+    h1= title
+    h4
+      a(class="add" href='/admin/news/add') Dodaj
+    table
+      tr
+        th id
+        th tytuł
+        th data dodania
+        th akcja
+      each item, index in data
+        tr
+          td=index
+          td=item.title
+          td=item.created
+          td
+            a(class="delete" href=`/admin/news/delete/${item._id}`) Usuń
+         
+
+

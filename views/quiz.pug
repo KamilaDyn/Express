@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  div(class='container')
+    h1= title
+    if show
+      form(method='post')
+        h3 1. Jaka jest Twoja ulubiona pora roku
+        ul
+          each item in data
+            li(class="answer")
+              label=item.title
+              input(type='radio' name="quiz" value=item._id)
+        input(class="vote" type='submit' value='zagłoszuj')
+        p(class='info') Aby zobaczyć wyniki oddaj głos
+    else
+      h3 Dokonałeś już głosu w ankiecie
+      h4 Wyniki
+      table
+        tr
+          th odpowiedź
+          th liczba
+          th procenty
+        each item in data  
+          tr
+            td(class="answers") #{item.title}
+            td #{item.vote}
+            td (#{Math.round(item.vote/sum*100)}%)
+      p(class="sum") Głosów oddano: #{sum}
+          
+            
+          //- li(class="answers") #{item.title} głosów: #{item.vote} (#{Math.round(item.vote/sum*100)}%)
+      //- p Głosów oddano: #{sum}
+

@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70vw;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.active {
+  font-weight: bold;
+  color: gray;
+}
+nav ul {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+.list-item {
+  font-size: 1.5em;
+  display: inline-flex;
+}
+.list-item a {
+  text-decoration: none;
+}
+a {
+  color: white;
+}
+h1 {
+  color: blue;
+  text-align: center;
+}
+h3 {
+  text-align: center;
+  padding: 10px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 2.33em;
+  margin-bottom: 1.33em;
+  min-height: 80vh;
+}
+
+/* news */
+
+h2 {
+  text-transform: uppercase;
+  color: blue;
+  padding-top: 10px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+form {
+  margin-top: 10px;
+}
+.search {
+  border: 1px solid blue;
+  line-height: 2em;
+}
+.button {
+  background-color: gray;
+  border: 1px solid gray;
+  color: white;
+  line-height: 2em;
+  text-transform: uppercase;
+  padding: 0 5px;
+}
+.button:hover {
+  background-color: blue;
+}
+.article {
+  border-bottom: 1px dotted black;
+  margin-bottom: 10px;
+}
+.article:last-child {
+  border-bottom: none;
+}
+.title {
+  color: gray;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+}
+.data {
+  padding: 10px;
+  line-height: 1.5em;
+  font-size: 1em;
+}
+.description {
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+/* QUIZ */
+
+.answer {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  list-style: none;
+  line-height: 1.5em;
+  width: 80%;
+}
+.vote {
+  background-color: gray;
+  border: 1px solid black;
+  color: white;
+  margin-top: 20px;
+  letter-spacing: 1px;
+  line-height: 1.3em;
+  padding: 3px;
+}
+.info {
+  color: red;
+  padding-top: 10px;
+}
+h3 {
+  color: red;
+}
+h4 {
+  text-transform: uppercase;
+  padding: 10px 0;
+  letter-spacing: 2px;
+  color: blue;
+}
+.answers {
+  line-height: 1.3em;
+}
+th {
+  text-align: left;
+}
+.sum {
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-top: 10px;
+}
+table {
+  border: 1px solid gray;
+}
+
+/* ADMIN */
+
+.add {
+  background-color: gray;
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+}
+.add:hover {
+  color: blue;
+}
+
+.delete {
+  color: red;
+}
+
+th {
+  padding: 5px 0;
+}
+.form {
+  padding: 20px 0;
+}
+.form-label {
+  padding-right: 10px;
+}
+.input-title {
+  border: 1px solid black;
+  line-height: 1.5em;
+}
+textarea {
+  border: 1px solid black;
+  width: 100%;
+  height: 50vh;
+}
+
+@media (max-width: 750px) {
+  body {
+    width: 90vw;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+  }
+  .list-item {
+    font-size: 1.3em;
+  }
+}
+@media (max-width: 490px) {
+  .list-item {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 390px) {
+  .list-item {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 370px) {
+  .list-item {
+    font-size: 1em;
+  }
+}

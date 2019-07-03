@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+  div(class='container')
+    h1= title
+
+    if errors.errors !== undefined
+      each message in errors.errors
+        p=message
+
+    form(method='post')
+      p(class='form')
+        label(class="form-label") Tytuł:
+        input(class="input-title" type='text' name='title' value=body.title || '')
+
+      p
+        label(class="form-label") Opis:
+        textarea(name='description')=body.description || ''
+
+      p
+        input(class="button" type="submit" value='zapisz')
