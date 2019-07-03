@@ -1,5 +1,5 @@
 START
 
-## nodemon './bin/www/'
+## nodemon './bin/www'
 
 run -> http://localhost:3000
