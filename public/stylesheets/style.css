@@ -100,7 +100,9 @@ form {
 }
 
 /* QUIZ */
-
+.question {
+  width: 60%;
+}
 .answer {
   display: flex;
   flex-direction: row;
@@ -108,8 +110,10 @@ form {
   justify-content: space-between;
   list-style: none;
   line-height: 1.5em;
+  margin-right: 30px;
   width: 80%;
 }
+
 .vote {
   background-color: gray;
   border: 1px solid black;
@@ -124,7 +128,8 @@ form {
   padding-top: 10px;
 }
 h3 {
-  color: red;
+  color: gray;
+  text-align: left;
 }
 h4 {
   text-transform: uppercase;
@@ -199,10 +204,17 @@ textarea {
   border: 1px solid black;
   margin-left: 10px;
 }
-
+@media (max-width: 900px) {
+  .question {
+    width: 75%;
+  }
+}
 @media (max-width: 750px) {
   body {
     width: 90vw;
+  }
+  .question {
+    width: 80%;
   }
 }
 @media (max-width: 600px) {
@@ -212,10 +224,16 @@ textarea {
   .list-item {
     font-size: 1.3em;
   }
+  .question {
+    width: 80%;
+  }
 }
 @media (max-width: 490px) {
   .list-item {
     font-size: 1.3em;
+  }
+  .question {
+    width: 100%;
   }
   table {
     width: 100%;
