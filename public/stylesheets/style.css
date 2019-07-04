@@ -145,6 +145,7 @@ th {
 }
 table {
   border: 1px solid gray;
+  max-width: 80%;
 }
 
 /* ADMIN */
@@ -182,6 +183,23 @@ textarea {
   height: 50vh;
 }
 
+/* LOGIN */
+
+.login-form {
+  margin: 20px auto;
+}
+.login-form p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px auto;
+  line-height: 1.5em;
+}
+.login {
+  border: 1px solid black;
+  margin-left: 10px;
+}
+
 @media (max-width: 750px) {
   body {
     width: 90vw;
@@ -198,6 +216,9 @@ textarea {
 @media (max-width: 490px) {
   .list-item {
     font-size: 1.3em;
+  }
+  table {
+    width: 100%;
   }
 }
 
